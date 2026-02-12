@@ -1,0 +1,142 @@
+/* --- CSS VARIABLES (THEMES) --- */
+:root {
+    /* DEFAULT: Terminal Theme */
+    --bg-color: #0d1117;
+    --text-color: #00ff41;
+    --accent-color: #008f11;
+    --border-style: 2px solid #00ff41;
+    --font-main: 'Courier New', Courier, monospace;
+    --card-bg: #161b22;
+    --glow: 0 0 10px #00ff41;
+}
+
+[data-theme="arcade"] {
+    /* ALTERNATE: Arcade Theme */
+    --bg-color: #2b003b;
+    --text-color: #e0faff;
+    --accent-color: #ff00ff;
+    --border-style: 3px double #00e5ff;
+    --font-main: 'Verdana', sans-serif;
+    --card-bg: #4a0e4e;
+    --glow: 0 0 15px #ff00ff;
+}
+
+/* --- RESET & LAYOUT --- */
+* { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: var(--border-style);
+    background: rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: var(--glow);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    box-shadow: var(--glow);
+}
+
+#theme-toggle {
+    background: transparent;
+    border: var(--border-style);
+    color: var(--text-color);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#theme-toggle:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- MAIN CONTENT AREA --- */
+#app {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* --- COMPONENT STYLES (Cards, Lists) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: var(--border-style);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: var(--border-style);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.blink { animation: blinker 1s linear infinite; }
+
+@keyframes blinker { 50% { opacity: 0; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- LOADING OVERLAY --- */
+#loading-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.hidden { display: none !important; }

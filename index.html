@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon-7 Game Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">NEON-7 <span class="blink">_</span></div>
+        <ul class="nav-links">
+            <li><a href="/" data-link>Main Log</a></li>
+            <li><a href="/characters" data-link>Operatives</a></li>
+            <li><a href="/locations" data-link>Sectors</a></li>
+            <li><a href="/about" data-link>System Info</a></li>
+        </ul>
+        <button id="theme-toggle">Theme: TERMINAL</button>
+    </nav>
+
+    <main id="app">
+        </main>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner">ACCESSING DATABANKS...</div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
