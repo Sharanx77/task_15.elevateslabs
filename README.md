@@ -67,7 +67,7 @@ This project fulfills the specific requirements for Task 15:
 **B Sharana Basava**
 *Electronics and Communication Engineering Student*
 
-* **LinkedIn:** [B Sharana Basava](https://www.linkedin.com/in/b-sharanabasava/)
+* **LinkedIn:** [B Sharana Basava](https://www.linkedin.com/in/b-sharana-basava-b4313a325/)
 * **GitHub:** [Sharanx77](https://github.com/Sharanx77)
 * **Email:** [b.sharanabasava2006@gmail.com](mailto:b.sharanabasava2006@gmail.com)
 
